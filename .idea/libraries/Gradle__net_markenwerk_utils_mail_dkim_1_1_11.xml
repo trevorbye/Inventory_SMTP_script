@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: net.markenwerk:utils-mail-dkim:1.1.11">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.markenwerk/utils-mail-dkim/1.1.11/3c0534fca7b53bf1fec42a87db5b2932948e426c/utils-mail-dkim-1.1.11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.markenwerk/utils-mail-dkim/1.1.11/ae7ac586498d390b903448b184ca4ec53b4f4f3f/utils-mail-dkim-1.1.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
