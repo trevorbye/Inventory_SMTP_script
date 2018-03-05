@@ -60,9 +60,11 @@ public class App {
 
         //pass queryLists to ApachePOI to build excel files
         //builder returns filename as String and passes to SMTP method
+        /*
         smtpService.sendEmail("Irene", ApachePOIExcelBuilder.buildExcelFile(ireneQuery, "Irene"), smtpService.connectToSMTP());
         smtpService.sendEmail("Nate", ApachePOIExcelBuilder.buildExcelFile(nateQuery, "Nate"), smtpService.connectToSMTP());
         smtpService.sendEmail("Nate-Jerome", ApachePOIExcelBuilder.buildExcelFile(nateJeromeQuery, "Nate-Jerome"), smtpService.connectToSMTP());
+        */
         smtpService.sendEmail("Crystal", ApachePOIExcelBuilder.buildExcelFile(crystalQuery, "Crystal"), smtpService.connectToSMTP());
     }
 }

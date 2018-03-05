@@ -6,6 +6,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -115,7 +116,7 @@ public class ApachePOIExcelBuilder {
             runningRow.createCell(0).setCellValue(entity.getAgeDays());
 
             if (NumberUtils.isDigits(entity.getWhseId())) {
-                runningRow.createCell(1).setCellValue(Long.parseLong(entity.getWhseId()));
+                runningRow.createCell(1).setCellValue(entity.getWhseId());
             } else {
                 runningRow.createCell(1).setCellValue(entity.getWhseId());
             }
@@ -123,7 +124,11 @@ public class ApachePOIExcelBuilder {
             runningRow.createCell(2).setCellValue(entity.getWhseName());
 
             if (NumberUtils.isDigits(entity.getItemNum())) {
-                runningRow.createCell(3).setCellValue(Long.parseLong(entity.getItemNum()));
+                try {
+                    runningRow.createCell(3).setCellValue(Long.parseLong(entity.getItemNum()));
+                } catch (NumberFormatException e) {
+                    runningRow.createCell(3).setCellValue(entity.getItemNum());
+                }
             } else {
                 runningRow.createCell(3).setCellValue(entity.getItemNum());
             }
@@ -132,20 +137,31 @@ public class ApachePOIExcelBuilder {
             runningRow.createCell(5).setCellValue(entity.getLotStatus());
 
             if (NumberUtils.isDigits(entity.getLotNum())) {
-
-                runningRow.createCell(6).setCellValue(Long.parseLong(entity.getLotNum()));
+                try {
+                    runningRow.createCell(6).setCellValue(Long.parseLong(entity.getLotNum()));
+                } catch (NumberFormatException e) {
+                    runningRow.createCell(6).setCellValue(entity.getLotNum());
+                }
             } else {
                 runningRow.createCell(6).setCellValue(entity.getLotNum());
             }
 
             if (NumberUtils.isDigits(entity.getSublotNum())) {
-                runningRow.createCell(7).setCellValue(Long.parseLong(entity.getSublotNum()));
+                try {
+                    runningRow.createCell(7).setCellValue(Long.parseLong(entity.getSublotNum()));
+                } catch (NumberFormatException e) {
+                    runningRow.createCell(7).setCellValue(entity.getSublotNum());
+                }
             } else {
                 runningRow.createCell(7).setCellValue(entity.getSublotNum());
             }
 
             if (NumberUtils.isDigits(entity.getQcGrade())) {
-                runningRow.createCell(8).setCellValue(Long.parseLong(entity.getQcGrade()));
+                try {
+                    runningRow.createCell(8).setCellValue(Long.parseLong(entity.getQcGrade()));
+                } catch (NumberFormatException e) {
+                    runningRow.createCell(8).setCellValue(entity.getQcGrade());
+                }
             } else {
                 runningRow.createCell(8).setCellValue(entity.getQcGrade());
             }
